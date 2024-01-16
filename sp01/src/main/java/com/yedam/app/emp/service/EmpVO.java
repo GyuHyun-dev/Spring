@@ -2,27 +2,27 @@ package com.yedam.app.emp.service;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 
 @Data	
 public class EmpVO {
-	private int employeeId;
+	private Integer employeeId;
 	private String firstName;
 	private String lastName;
 	private String email;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date hireDate;
 	private String jobId;
 	private double salary;
 	private double commissionPct;
 	private int managerId;
 	private Date birthday;
-	
-	
-	// 롬복 안먹어서 getter setter 안됨 강제로 만듬
-	public int getEmployeeId() {
+	public Integer getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(int employeeId) {
+	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
 	public String getFirstName() {
@@ -79,5 +79,7 @@ public class EmpVO {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
+	
+	
 	
 }
