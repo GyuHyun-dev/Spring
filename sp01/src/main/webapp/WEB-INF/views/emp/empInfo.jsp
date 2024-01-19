@@ -44,6 +44,7 @@
 		<div>
 			<button type="button" onclick="location.href='empList'">목록으로</button>
 			<button type="button" id="updateBtn">수정</button>
+<<<<<<< HEAD
 			<button type="button" onclick="location.href='empDelete?eid=${empInfo.employeeId}'">삭제</button>
 		</div>
 	</form>
@@ -84,6 +85,32 @@
 		}
 		
 		
+=======
+			<button type="button">삭제</button>
+		</div>
+	</form>
+	<script>
+		document.querySelector('#updateBtn')
+				.addEventListener('click', updateEmpInfo);
+		
+		function updateEmpInfo(event) {
+			// form 태그 내부의 입력태그를 기반으로 정보를 가져옴
+			let empInfo = getEmpInfo();
+			console.log(empInfo);
+			
+			// 해당 정보를 기반으로 Ajax
+			// -QuerySelector
+			fetch('empUpdate', {
+				method : 'post',
+				body : new URLSearchParams(empInfo)
+			})
+			.then(response => response.json())
+			.then(result => {
+				console.log('QueryString', result);
+			})
+			.catch(err => console.log(err));
+		}
+>>>>>>> refs/remotes/origin/main
 		
 		function getEmpInfo() {
 			let inputList = document.querySelectorAll('form input');

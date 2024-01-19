@@ -14,5 +14,5 @@
 							<!-- 컨트롤러만 어노테이션 관섭한다. expression 에는 컨트롤러 import 경로 -->
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
-	
+
 </beans>

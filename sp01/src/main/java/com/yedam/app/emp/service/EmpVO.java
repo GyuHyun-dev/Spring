@@ -20,6 +20,7 @@ public class EmpVO {
 	private int managerId;
 	private Date birthday;
 	
+
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
@@ -80,7 +81,5 @@ public class EmpVO {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
-	
-	
 	
 }
